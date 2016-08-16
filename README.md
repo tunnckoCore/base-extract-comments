@@ -1,6 +1,6 @@
 # [base-extract-comments][author-www-url] [![npmjs.com][npmjs-img]][npmjs-url] [![The MIT License][license-img]][license-url] [![npm downloads][downloads-img]][downloads-url] 
 
-> Base application plugin for extracting code comments using `acorn-extract-comments`.
+> Base (github @node-base) application plugin for extracting code comments using `acorn-extract-comments`.
 
 [![code climate][codeclimate-img]][codeclimate-url] [![standard code style][standard-img]][standard-url] [![travis build status][travis-img]][travis-url] [![coverage status][coveralls-img]][coveralls-url] [![dependency status][david-img]][david-url]
 
