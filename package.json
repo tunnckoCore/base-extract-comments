@@ -1,6 +1,6 @@
 {
   "name": "base-extract-comments",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Base (github @node-base) application plugin for extracting code comments using `acorn-extract-comments`.",
   "repository": "tunnckoCore/base-extract-comments",
   "author": "Charlike Mike Reagent <@tunnckoCore> (http://www.tunnckocore.tk)",
