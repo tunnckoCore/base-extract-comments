@@ -19,12 +19,15 @@ test('app.extractComments can be synchronous', function (done) {
   app.use(plugin())
   app.use(function (app) {
     return function (comment) {
+      test.ok(comment, 'expect an object')
       test.strictEqual(typeof comment, 'object')
       test.strictEqual(typeof comment.index, 'number')
       test.strictEqual(typeof comment.current, 'string')
     }
   })
-  app.extractComments(input)
+  var comments = app.extractComments(input)
+  test.ok(comments, 'expect an array of comment objects')
+  test.ok(comments.length > 1)
   done()
 })
 
