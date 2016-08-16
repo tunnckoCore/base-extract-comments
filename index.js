@@ -26,7 +26,7 @@ var utils = require('./utils')
  * ```
  *
  * @name   baseExtractComments
- * @param  {Object} `opts` options object merged with `app.options`
+ * @param  {Object} `opts` merged with `app.options` and passed to [acorn-extract-comments][]
  * @return {Function} the actual plugin
  * @api public
  */
@@ -72,7 +72,7 @@ module.exports = function baseExtractComments (opts) {
      *
      * @name   .extractComments
      * @param  {String|Object|Function} `input` input string, `options` or `done` callback
-     * @param  {Object|Function} `options` optional `options` or `done` callback
+     * @param  {Object|Function} `options` merged with `app.options` and passed to [acorn-extract-comments][] or `done` callback
      * @param  {Function} `done` callback function (optional)
      * @return {Array} an Array of comment objects or `done(null, comments)`
      * @api public

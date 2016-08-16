@@ -21,7 +21,7 @@ const baseExtractComments = require('base-extract-comments')
 
 **Params**
 
-* `opts` **{Object}**: options object merged with `app.options`    
+* `opts` **{Object}**: merged with `app.options` and passed to [acorn-extract-comments][]    
 * `returns` **{Function}**: the actual plugin  
 
 **Example**
@@ -41,7 +41,7 @@ console.log(app.extractComments) // => [Function: extractComments]
 **Params**
 
 * `input` **{String|Object|Function}**: input string, `options` or `done` callback    
-* `options` **{Object|Function}**: optional `options` or `done` callback    
+* `options` **{Object|Function}**: merged with `app.options` and passed to [acorn-extract-comments][] or `done` callback    
 * `done` **{Function}**: callback function (optional)    
 * `returns` **{Array}**: an Array of comment objects or `done(null, comments)`  
 
@@ -70,10 +70,13 @@ app.extractComments('foo bar', function done (err, comments) {
 ```
 
 ## Related
+- [acorn-extract-comments](https://www.npmjs.com/package/acorn-extract-comments): Extract JavaScript code comments from a string, using `acorn`. Optionally returns the… [more](https://github.com/tunnckocore/acorn-extract-comments#readme) | [homepage](https://github.com/tunnckocore/acorn-extract-comments#readme "Extract JavaScript code comments from a string, using `acorn`. Optionally returns the AST and first line of code after comment - useful for parsing code context and api docs.")
 - [base-data](https://www.npmjs.com/package/base-data): adds a `data` method to base-methods. | [homepage](https://github.com/node-base/base-data "adds a `data` method to base-methods.")
 - [base-plugins-enhanced](https://www.npmjs.com/package/base-plugins-enhanced): Error handling and extras for `.use` and `.run` methods of your Base… [more](https://github.com/tunnckocore/base-plugins-enhanced#readme) | [homepage](https://github.com/tunnckocore/base-plugins-enhanced#readme "Error handling and extras for `.use` and `.run` methods of your Base apps. Modifies `.use` method to be able to 1) accept array of functions, 2) options object as second argument. Emits `error` event if some plugin fails.")
 - [base-plugins](https://www.npmjs.com/package/base-plugins): Upgrade's plugin support in base applications to allow plugins to be called… [more](https://github.com/node-base/base-plugins) | [homepage](https://github.com/node-base/base-plugins "Upgrade's plugin support in base applications to allow plugins to be called any time after init.")
 - [base](https://www.npmjs.com/package/base): base is the foundation for creating modular, unit testable and highly pluggable… [more](https://github.com/node-base/base) | [homepage](https://github.com/node-base/base "base is the foundation for creating modular, unit testable and highly pluggable node.js applications, starting with a handful of common methods, like `set`, `get`, `del` and `use`.")
+- [extract-comments](https://www.npmjs.com/package/extract-comments): Uses esprima to extract line and block comments from a string of… [more](https://github.com/jonschlinkert/extract-comments) | [homepage](https://github.com/jonschlinkert/extract-comments "Uses esprima to extract line and block comments from a string of JavaScript. Also optionally parses code context (the next line of code after a comment).")
+- [postcore](https://www.npmjs.com/package/postcore): Processor engine for Post* family like PostCSS, PostHTML and PostJSON. | [homepage](https://github.com/postcore/postcore#readme "Processor engine for Post* family like PostCSS, PostHTML and PostJSON.")
 - [use-ware](https://www.npmjs.com/package/use-ware): Adds sync plugin support to your application. Kinda fork of [use… [more](https://github.com/tunnckocore/use-ware#readme) | [homepage](https://github.com/tunnckocore/use-ware#readme "Adds sync plugin support to your application. Kinda fork of [use][] - use it if you need to support nesting. Or use [ware][] if you need async middleware system.")
 - [use](https://www.npmjs.com/package/use): Easily add plugin support to your node.js application. | [homepage](https://github.com/jonschlinkert/use "Easily add plugin support to your node.js application.")
 
@@ -87,6 +90,8 @@ But before doing anything, please read the [CONTRIBUTING.md](./CONTRIBUTING.md) 
 
 [acorn-extract-comments]: https://github.com/tunnckocore/acorn-extract-comments
 [base]: https://github.com/node-base/base
+[use]: https://github.com/jonschlinkert/use
+[ware]: https://github.com/segmentio/ware
 
 [npmjs-url]: https://www.npmjs.com/package/base-extract-comments
 [npmjs-img]: https://img.shields.io/npm/v/base-extract-comments.svg?label=base-extract-comments
@@ -133,5 +138,3 @@ But before doing anything, please read the [CONTRIBUTING.md](./CONTRIBUTING.md) 
 [new-message-url]: https://github.com/tunnckoCore/ama
 [new-message-img]: https://img.shields.io/badge/ask%20me-anything-green.svg
 
-[use]: https://github.com/jonschlinkert/use
-[ware]: https://github.com/segmentio/ware

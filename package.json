@@ -43,6 +43,11 @@
     "plugin",
     "plugins"
   ],
+  "standard": {
+    "ignore": [
+      "fixture.js"
+    ]
+  },
   "verb": {
     "run": true,
     "toc": false,
@@ -57,7 +62,10 @@
         "base-plugins-enhanced",
         "use",
         "use-ware",
-        "base-data"
+        "base-data",
+        "acorn-extract-comments",
+        "extract-comments",
+        "postcore"
       ]
     },
     "reflinks": [
@@ -69,10 +77,5 @@
     "lint": {
       "reflinks": true
     }
-  },
-  "standard": {
-    "ignore": [
-      "fixture.js"
-    ]
   }
 }
