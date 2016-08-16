@@ -16,6 +16,78 @@ npm i base-extract-comments --save
 const baseExtractComments = require('base-extract-comments')
 ```
 
+### [baseExtractComments](index.js#L34)
+> Plugin that adds `.extractComments` method to your [base][] application, that extracts JSDoc-style code comments using [acorn-extract-comments][] lib.
+
+**Params**
+
+* `opts` **{Object}**: options object merged with `app.options`    
+* `returns` **{Function}**: the actual plugin  
+
+**Example**
+
+```js
+var extract = require('base-extract-comments')
+var Base = require('base')
+var app = new Base({ isApp: true })
+
+app.use(extract({ foo: 'option' }))
+console.log(app.extractComments) // => [Function: extractComments]
+```
+
+### [.extractComments](index.js#L89)
+> Extract code comments from `input` string and returns an array of comment objects or pass it to `done` callback. Notice that `.extractComments` have sync and async mode, so if you do not pass `done` callback it will throw or return an Array. You also can pass `input` to the constructor of your app to the `this.cache` object such as `{ cache: { input: 'some str' } }`
+
+```js
+// sync mode
+var app = new Base({ cache: { input: 'foo bar baz' } })
+app.use(extract())
+var comments = app.extractComments()
+// => array of comment objects
+```
+```js
+// async mode
+app.use(extract())
+app.extractComments('foo bar', function done (err, comments) {
+  // => `comments` is array of comment objects
+})
+```
+
+**Params**
+
+* `input` **{String|Object|Function}**: input string, `options` or `done` callback    
+* `options` **{Object|Function}**: optional `options` or `done` callback    
+* `done` **{Function}**: callback function (optional)    
+* `returns` **{Array}**: an Array of comment objects or `done(null, comments)`  
+
+**Examples**
+
+```js
+// sync mode
+
+app.use(extract())
+var comments = app.extractComments('some string')
+// => array of comment objects
+```
+
+```js
+// sync mode
+
+var app = new Base({ cache: { input: 'foo bar baz' } })
+app.use(extract())
+var comments = app.extractComments()
+// => array of comment objects
+```
+
+```js
+// async mode
+
+app.use(extract())
+app.extractComments('foo bar', function done (err, comments) {
+  // => `comments` is array of comment objects
+})
+```
+
 ## Contributing
 Pull requests and stars are always welcome. For bugs and feature requests, [please create an issue](https://github.com/tunnckoCore/base-extract-comments/issues/new).  
 But before doing anything, please read the [CONTRIBUTING.md](./CONTRIBUTING.md) guidelines.
@@ -23,6 +95,9 @@ But before doing anything, please read the [CONTRIBUTING.md](./CONTRIBUTING.md) 
 ## [Charlike Make Reagent](http://j.mp/1stW47C) [![new message to charlike][new-message-img]][new-message-url] [![freenode #charlike][freenode-img]][freenode-url]
 
 [![tunnckoCore.tk][author-www-img]][author-www-url] [![keybase tunnckoCore][keybase-img]][keybase-url] [![tunnckoCore npm][author-npm-img]][author-npm-url] [![tunnckoCore twitter][author-twitter-img]][author-twitter-url] [![tunnckoCore github][author-github-img]][author-github-url]
+
+[acorn-extract-comments]: https://github.com/tunnckocore/acorn-extract-comments
+[base]: https://github.com/node-base/base
 
 [npmjs-url]: https://www.npmjs.com/package/base-extract-comments
 [npmjs-img]: https://img.shields.io/npm/v/base-extract-comments.svg?label=base-extract-comments
