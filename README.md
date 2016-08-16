@@ -35,23 +35,8 @@ app.use(extract({ foo: 'option' }))
 console.log(app.extractComments) // => [Function: extractComments]
 ```
 
-### [.extractComments](index.js#L89)
+### [.extractComments](index.js#L81)
 > Extract code comments from `input` string and returns an array of comment objects or pass it to `done` callback. Notice that `.extractComments` have sync and async mode, so if you do not pass `done` callback it will throw or return an Array. You also can pass `input` to the constructor of your app to the `this.cache` object such as `{ cache: { input: 'some str' } }`
-
-```js
-// sync mode
-var app = new Base({ cache: { input: 'foo bar baz' } })
-app.use(extract())
-var comments = app.extractComments()
-// => array of comment objects
-```
-```js
-// async mode
-app.use(extract())
-app.extractComments('foo bar', function done (err, comments) {
-  // => `comments` is array of comment objects
-})
-```
 
 **Params**
 
@@ -60,7 +45,7 @@ app.extractComments('foo bar', function done (err, comments) {
 * `done` **{Function}**: callback function (optional)    
 * `returns` **{Array}**: an Array of comment objects or `done(null, comments)`  
 
-**Examples**
+**Example**
 
 ```js
 // sync mode
@@ -68,19 +53,15 @@ app.extractComments('foo bar', function done (err, comments) {
 app.use(extract())
 var comments = app.extractComments('some string')
 // => array of comment objects
-```
 
-```js
-// sync mode
+// or
 
 var app = new Base({ cache: { input: 'foo bar baz' } })
 app.use(extract())
 var comments = app.extractComments()
 // => array of comment objects
-```
 
-```js
-// async mode
+// or in async mode
 
 app.use(extract())
 app.extractComments('foo bar', function done (err, comments) {

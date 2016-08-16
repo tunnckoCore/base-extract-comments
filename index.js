@@ -54,23 +54,15 @@ module.exports = function baseExtractComments (opts) {
      * app.use(extract())
      * var comments = app.extractComments('some string')
      * // => array of comment objects
-     * ```
      *
-     * **Example**
-     *
-     * ```js
-     * // sync mode
+     * // or
      *
      * var app = new Base({ cache: { input: 'foo bar baz' } })
      * app.use(extract())
      * var comments = app.extractComments()
      * // => array of comment objects
-     * ```
      *
-     * **Example**
-     *
-     * ```js
-     * // async mode
+     * // or in async mode
      *
      * app.use(extract())
      * app.extractComments('foo bar', function done (err, comments) {
