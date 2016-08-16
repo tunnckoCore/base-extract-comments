@@ -1,0 +1,44 @@
+{
+  "name": "base-extract-comments",
+  "version": "0.0.0",
+  "description": "Base application plugin for extracting code comments using `acorn-extract-comments`.",
+  "repository": "tunnckoCore/base-extract-comments",
+  "author": "Charlike Mike Reagent <@tunnckoCore> (http://www.tunnckocore.tk)",
+  "precommit.silent": true,
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "standard && node test.js"
+  },
+  "dependencies": {
+    "acorn-extract-comments": "^0.2.0",
+    "base-plugins": "^0.4.13",
+    "base-plugins-enhanced": "^0.1.2",
+    "is-valid-app": "^0.2.0",
+    "lazy-cache": "^2.0.1",
+    "lazy-utils": "^1.0.1"
+  },
+  "devDependencies": {
+    "base": "^0.11.1",
+    "mukla": "^0.4.1",
+    "pre-commit": "*"
+  },
+  "files": [
+    "index.js",
+    "utils.js"
+  ],
+  "keywords": [
+    "base-extract-comments"
+  ],
+  "verb": {
+    "run": true,
+    "toc": false,
+    "layout": "empty",
+    "tasks": [
+      "readme"
+    ],
+    "lint": {
+      "reflinks": true
+    }
+  }
+}
