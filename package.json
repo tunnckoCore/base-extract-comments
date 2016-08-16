@@ -28,7 +28,20 @@
     "utils.js"
   ],
   "keywords": [
-    "base-extract-comments"
+    "acorn",
+    "base",
+    "base-extract-comments",
+    "baseplugin",
+    "block",
+    "code",
+    "codeblock",
+    "codecomments",
+    "comments",
+    "extract",
+    "get",
+    "jsdoc",
+    "plugin",
+    "plugins"
   ],
   "verb": {
     "run": true,
