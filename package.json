@@ -37,15 +37,24 @@
     "tasks": [
       "readme"
     ],
-    "lint": {
-      "reflinks": true
-    },
     "related": {
-      "list": []
+      "list": [
+        "base",
+        "base-plugins",
+        "base-plugins-enhanced",
+        "use",
+        "use-ware",
+        "base-data"
+      ]
     },
     "reflinks": [
       "acorn-extract-comments",
-      "base"
-    ]
+      "base",
+      "use",
+      "ware"
+    ],
+    "lint": {
+      "reflinks": true
+    }
   }
 }

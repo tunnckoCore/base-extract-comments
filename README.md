@@ -69,6 +69,14 @@ app.extractComments('foo bar', function done (err, comments) {
 })
 ```
 
+## Related
+- [base-data](https://www.npmjs.com/package/base-data): adds a `data` method to base-methods. | [homepage](https://github.com/node-base/base-data "adds a `data` method to base-methods.")
+- [base-plugins-enhanced](https://www.npmjs.com/package/base-plugins-enhanced): Error handling and extras for `.use` and `.run` methods of your Base… [more](https://github.com/tunnckocore/base-plugins-enhanced#readme) | [homepage](https://github.com/tunnckocore/base-plugins-enhanced#readme "Error handling and extras for `.use` and `.run` methods of your Base apps. Modifies `.use` method to be able to 1) accept array of functions, 2) options object as second argument. Emits `error` event if some plugin fails.")
+- [base-plugins](https://www.npmjs.com/package/base-plugins): Upgrade's plugin support in base applications to allow plugins to be called… [more](https://github.com/node-base/base-plugins) | [homepage](https://github.com/node-base/base-plugins "Upgrade's plugin support in base applications to allow plugins to be called any time after init.")
+- [base](https://www.npmjs.com/package/base): base is the foundation for creating modular, unit testable and highly pluggable… [more](https://github.com/node-base/base) | [homepage](https://github.com/node-base/base "base is the foundation for creating modular, unit testable and highly pluggable node.js applications, starting with a handful of common methods, like `set`, `get`, `del` and `use`.")
+- [use-ware](https://www.npmjs.com/package/use-ware): Adds sync plugin support to your application. Kinda fork of [use… [more](https://github.com/tunnckocore/use-ware#readme) | [homepage](https://github.com/tunnckocore/use-ware#readme "Adds sync plugin support to your application. Kinda fork of [use][] - use it if you need to support nesting. Or use [ware][] if you need async middleware system.")
+- [use](https://www.npmjs.com/package/use): Easily add plugin support to your node.js application. | [homepage](https://github.com/jonschlinkert/use "Easily add plugin support to your node.js application.")
+
 ## Contributing
 Pull requests and stars are always welcome. For bugs and feature requests, [please create an issue](https://github.com/tunnckoCore/base-extract-comments/issues/new).  
 But before doing anything, please read the [CONTRIBUTING.md](./CONTRIBUTING.md) guidelines.
@@ -125,3 +133,5 @@ But before doing anything, please read the [CONTRIBUTING.md](./CONTRIBUTING.md) 
 [new-message-url]: https://github.com/tunnckoCore/ama
 [new-message-img]: https://img.shields.io/badge/ask%20me-anything-green.svg
 
+[use]: https://github.com/jonschlinkert/use
+[ware]: https://github.com/segmentio/ware
