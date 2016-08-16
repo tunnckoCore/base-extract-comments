@@ -77,8 +77,9 @@ exports = module.exports = function extractAllComments (input, opts) {
  * @return {Array} can have `.ast` property if `opts.ast: true`
  * @api public
  */
+
 exports.line = function extractLineComments (input, opts) {
-  opts = extend({line: true}, opts)
+  opts = extend({line: true}, opts) /* eslint-disable */
   return acornExtractComments(input, opts)
 }
 
@@ -105,8 +106,9 @@ exports.line = function extractLineComments (input, opts) {
  * @api public
  */
 exports.block = function extractBlockComments (input, opts) {
-  opts = extend({block: true}, opts)
-  return acornExtractComments(input, opts)
+  var options = extend({}, {block: true}, opts)
+  var res = acornExtractComments(input, options)
+  return res
 }
 
 /*!
@@ -163,6 +165,8 @@ function acornExtractComments (input, opts) {
   return comments
 }
 
+/* eslint-enable */
+
 /*! ~~
  * > Default ignore/preserve check function
  *
@@ -173,3 +177,4 @@ function acornExtractComments (input, opts) {
 function defaultIsIgnore (val) {
   return val.charCodeAt(0) === 33
 }
+

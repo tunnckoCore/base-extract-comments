@@ -56,5 +56,10 @@
     "lint": {
       "reflinks": true
     }
+  },
+  "standard": {
+    "ignore": [
+      "fixture.js"
+    ]
   }
 }

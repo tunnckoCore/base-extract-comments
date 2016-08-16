@@ -78,7 +78,8 @@ module.exports = function baseExtractComments (opts) {
      * @api public
      */
 
-    this.define('extractComments', function parse (input, options, done) {
+    this.define('extractComments', function parse (input, options, done) { /* eslint complexity: [2, 20] */
+      /* eslint complexity: [2, 20] */
       done = typeof input === 'function' ? input : done
       done = typeof options === 'function' ? options : done
       done = typeof done === 'function' ? done : null
