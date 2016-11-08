@@ -15,7 +15,7 @@
     "base-plugins": "^0.4.13",
     "base-plugins-enhanced": "^0.1.2",
     "is-valid-app": "^0.2.0",
-    "lazy-cache": "^2.0.1",
+    "lazy-cache": "^2.0.2",
     "lazy-utils": "^1.0.1"
   },
   "devDependencies": {
